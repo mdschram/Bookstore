@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="books.css" type="text/css">
+
+    <title> Ubiqum Bookstore </title>
+</head>
+
+<body>
+    
+     <div id="main">
+    
+    <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+
+
+                <div class="textfield">
+                   <img class="logo-img" src="logo.jpg">UBIQUM BOOKSTORE
+                    <input type="text" placeholder="Buscar..." v-model="search">
+                </div>
+            </div>
+        </nav>
+        
+        <div class="container books">
+
+            <div id="f1_container" v-for="book in filteredBooks">
+                <div id="f1_card" class="shadow">
+                    <div class="front face">
+                        <img v-bind:src="book.portada">
+                    </div>
+                    <div class="back face center">
+                        <p class="booktitle">{{book.titulo}}</p>
+                        <p class="description">{{book.descripcion}}</p>
+                        <a data-fancybox="images" :href="book.detalle"><button class="btn-danger">More info</button> 
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.5/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
+    <script src="main.js"></script>
+
+</body>
+
+</html>
