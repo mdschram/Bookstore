@@ -1,5 +1,5 @@
 function start() {
-    console.log(1);
+  
 
     var fetchConfig =
         fetch("https://api.myjson.com/bins/1h3vb3", {
@@ -8,28 +8,27 @@ function start() {
         .then(onDataFetched)
         .catch(onDataFetchFailed);
 
-    console.log(3);
-}
+    }
 
 function onDataFetched(response) {
     response.json()
         .then(onConversionToJsonSuccessful)
         .catch(onConversionToJsonFailed);
-    console.log(2);
+   
 }
 
 function onDataFetchFailed(error) {
-    console.log("I have failed in life.", error);
+    
 }
 
 function onConversionToJsonSuccessful(json) {
-    console.log("success!!!!", json);
+ 
     serverData = json;
     testBooks()
 }
 
 function onConversionToJsonFailed() {
-    //    console.log("Not a json mate!");
+   
 }
 
 start()
@@ -51,7 +50,6 @@ var main = new Vue({
             } else {
                 this.searchedBooks = true
             }
-            console.log(this.searchedBooks)
             return filtered;
 
         }
@@ -59,7 +57,6 @@ var main = new Vue({
     },
     methods: {
         clicked: function () {
-            console.log(book.titulo)
         }
     }
 })
