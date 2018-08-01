@@ -13,20 +13,20 @@
 </head>
 
 <body>
-    
-     <div id="main">
-    
-    <nav class="navbar navbar-default navbar-fixed-top">
+
+    <div id="main">
+
+        <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
 
 
                 <div class="textfield">
-                   <img class="logo-img" src="logo.jpg">UBIQUM BOOKSTORE
-                    <input type="text" placeholder="Buscar..." v-model="search">
+                    <img class="logo-img" src="logo.jpg">UBIQUM BOOKSTORE
+                    <input type="text" placeholder="Search..." v-model="search">
                 </div>
             </div>
         </nav>
-        
+
         <div class="container books">
 
             <div id="f1_container" v-for="book in filteredBooks">
@@ -42,7 +42,10 @@
                     </div>
                 </div>
             </div>
+            <div class="textcontainer">
+            <div class="nobooks" v-if="searchedBooks == false">No books match your search</div></div>
         </div>
+
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>

@@ -39,12 +39,21 @@ var main = new Vue({
     data: {
         books: [],
         search: "",
+        searchedBooks: true
     },
     computed: {
         filteredBooks: function () {
-            return this.books.filter((book) => {
+            let filtered = this.books.filter((book) => {
                 return book.titulo.match(this.search) || book.descripcion.match(this.search)
             })
+            if (filtered.length == 0) {
+               this.searchedBooks = false;
+            } else {
+                this.searchedBooks = true
+            }
+            console.log(this.searchedBooks)
+            return filtered;
+
         }
 
     },

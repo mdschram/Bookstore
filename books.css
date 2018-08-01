@@ -72,8 +72,6 @@
 .face.back {
     display: block;
     transform: rotateY(180deg);
-    /*  box-sizing: border-box;*/
-    /*    padding: 10px;*/
     color: white;
     text-align: center;
     background-color: #f4e542;
@@ -98,14 +96,15 @@ p {
     padding-right: 10px;
 }
 
-.btn-danger {
+.btn-danger {margin-bottom: 15px;
     -webkit-border-radius: 10px;
 }
 
 .booktitle {
-    padding-top: 40px;
+    padding-top: 20px;
     padding-left: 10px;
     padding-right: 10px;
+    height: 20%
 }
 
 
@@ -113,3 +112,15 @@ html {
     overflow: -moz-scrollbars-vertical; 
     overflow-y: scroll;
 }
+
+.nobooks {border: 1px solid black;
+    color: red;
+margin: 20px;
+    padding: 5px;
+    margin-top: 50px
+}
+
+.textcontainer {height: 100%;
+width: 100%;
+display: flex;
+justify-content: space-around}
